@@ -4,6 +4,9 @@ FROM ubuntu:latest
 # Set the working directory to /app
 WORKDIR /app
 
+# Install curl
+RUN apt-get update && apt-get install -y curl
+
 # Download the binary file from Nexus (assuming /app is the working directory)
 ARG NEXUS_URL=http://13.51.237.201:8081
 ARG NEXUS_REPOSITORY=app-web
