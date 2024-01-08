@@ -1,4 +1,5 @@
-FROM openjdk:8-jdk-alpine
-WORKDIR /app
-COPY ./target/*.war /app.war
+FROM openjdk:11-jre-alpine
+
+COPY target/chatbot.war /app.war
+
 CMD ["java", "-jar", "/app.war"]
